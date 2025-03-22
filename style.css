@@ -1,0 +1,473 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    font-size: larger;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    padding: 10px;
+    background-color: #000000;
+    color: #fff;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+  }
+  .web_group {
+    flex: 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .web_group a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .green {
+    width: 1px;
+    height: 30px;
+    background-color: #028673;
+    margin: 2px;
+  }
+  .Lgin-icon {
+    display: flex;
+    align-items: center;
+  }
+
+  .Lgin-icon a {
+    color: #028673;
+    margin: 5px;
+  }
+  .Lgin-icon img {
+    border: 2px solid #028673;
+  }
+  .mobil_group {
+    width: 250px;
+    height: 100vh;
+    background-color: #028673;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    z-index: 2;
+  }
+  nav ul li {
+    list-style: none;
+    margin-left: 50px;
+    margin-top: 20px;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .minu_icon {
+    display: none;
+    cursor: pointer;
+    z-index: 3;
+  }
+  .minu_icon img {
+    width: 50px;
+    height: 50px;
+  }
+  @media (max-width: 568px) {
+    .minu_icon {
+      display: block;
+    }
+    .web_group {
+      display: none;
+    }
+  }
+
+ /* main section */
+ .main_page {
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-image: linear-gradient( #000 ,#028673);
+    margin-bottom: 30px;
+  }
+  .scan_div{
+    margin-right: 30px;
+    flex: 1;
+    text-align: center;
+  }
+  
+  .scan_text {
+    flex: 1;
+    padding-right: 20px;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .scan_text h1{
+    font-family: "Titillium Web";
+    font-size: 80px;
+    line-height: 70px;
+    font-weight: 700;
+    color: #fff;
+    margin: 90px !important;
+    padding-bottom: 10px;
+  }
+  .scan_text p{
+    font-family: "Open Sans";
+    color: #FFF;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    margin-bottom: 30px;
+    
+  }
+  
+  .url_box {
+    margin-bottom: 10px;
+  }
+  .Url{
+    text-align: center;
+    border: none;
+    outline: none;
+}
+  
+  .Url::placeholder{
+     text-align: center;
+     
+  }
+  
+  .for_scan {
+    font-weight: bold;
+    display: inline;
+  }
+  
+  input[type="text"] {
+    width: 50%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type="text"]::placeholder {
+    text-align: center;
+    color: #888; }
+  
+  .submit {
+    padding: 10px 20px;
+    background-color: #024b40;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submit:hover {
+    background-color: #33a19a;
+  }
+  
+  .scan_img {
+    flex: 1;
+    max-width: 100%; 
+    margin-top: 20px;
+    width: 50%; 
+    height: 100%; 
+    overflow: hidden; 
+    background-image: url("images/6bc6aad1e0424d5f8e69a864ba74d8ec-removebg-preview.png");
+    background-position: center;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+  }
+  
+/* login */
+.login_section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    width: 70%;
+    margin-left: 120px;
+    box-shadow:8px  #303030;
+ }
+
+.login_image,
+.login_form {
+    padding: 20px;
+    flex: 1;
+}
+
+.login_image {
+    width: 100%;
+    height: auto;
+    background-image: url("images/1447c3dde903d7ac5681ca2e774a3411.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login_form {
+    background-color: #f9f9f9;
+}
+
+.form_group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit_button {
+    padding: 10px 20px;
+    background-color: #028673;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 40%;
+}
+
+.submit_button:hover {
+    background-color: #025d57;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+p a {
+    color: #028673;
+    text-decoration: none;
+}
+/* about us */
+
+.about_us {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about_txt {
+  margin-right: 20px;
+  margin-left: 40px;
+  max-width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  display: inline-block;
+  margin-bottom: 100px;
+}
+
+.about_txt h2 {
+  font-family: "Titillium Web";
+  font-size: 50px;
+  line-height: 70px;
+  font-weight: 700;
+  margin-left: 40px;
+}
+
+.about_txt {
+  margin-left:40px;
+  margin-right:40px;
+}
+
+.about_txt p {
+  color: #000;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: justify;
+  text-indent: 40px; 
+  word-wrap: break-word; 
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.about_txt a {
+  width: 180px;
+  height: 30px;
+  background-color: #028673;
+  border: 1px solid #04443a;
+  border-radius: 3px;
+  color: #fff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  padding: 8px;
+  margin-left: 100px;
+  margin-top:60px;
+  font-size: larger;
+  display: block;
+  text-decoration: none;
+
+}
+.about_img{
+  margin-top:-60px ;
+  flex: 1;
+  max-width:600px ;
+  height:400px ;
+  background-image:url("aboutus.jpg") ;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+  /* contact us */
+  .contact_us {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 30px;
+    /* background-image: linear-gradient(  #028673,#000); */
+    background-color: #028673;
+    color: #fff;
+    
+}
+
+.contact_form {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box; 
+    max-width: 100%; 
+}
+
+.contact_image {
+    flex: 1;
+    max-width: 100%; 
+    margin-top: 20px; 
+}
+
+.contact_image img {
+    width: 100%;
+    height: auto;
+}
+
+.form_group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+.form_group input[type="text"],
+.form_group input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit_button {
+    padding: 10px 20px;
+    background-color: #04443a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit_button:hover {
+    background-color: #025d57;
+}
+ 
+
+ /* Footer styles */
+footer {
+    background-color: #303030;
+    color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+.footer_top {
+    padding: 50px 0;
+}
+
+.footer_top .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer_top h3 {
+    color: #fff;
+}
+
+.footer_top p {
+    color: #aaa;
+}
+
+.footer_top ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer_top ul li {
+    margin-bottom: 10px;
+}
+
+.footer_top ul li a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.footer_bottom {
+    background-color: #202020;
+    padding: 20px 0;
+}
+
+.footer_bottom p {
+    color: #aaa;
+}
+
+.social_icons {
+    list-style: none;
+    padding: 0;
+}
+
+.social_icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social_icons li a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .contact_form,
+    .contact_image  ,.main_page, .about_us,.login_section {
+        flex: 0 0 100%; /* Take full width on small screens */
+    }
+}
+

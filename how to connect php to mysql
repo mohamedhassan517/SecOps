@@ -1,0 +1,24 @@
+1-sudo mysql -u root -p
+2-Once in the MySQL shell, execute the following commands:
+3-CREATE DATABASE login_system;
+	CREATE USER 'login_user'@'localhost' IDENTIFIED BY 'password';
+	GRANT ALL PRIVILEGES ON login_system.* TO 'login_user'@'localhost';
+	FLUSH PRIVILEGES;
+	EXIT;
+
+sudo mysql -u root -p login_system
+Create a table for storing user information:
+In the MySQL shell, execute:
+CREATE TABLE users (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    f_name VARCHAR(30) NOT NULL,
+    l_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    md5_pass VARCHAR(255) NOT NULL,
+    reg_date TIMESTAMP
+);
+EXIT;
+
+
+INSERT INTO `users` (`id`, `f_name`, `l_name`, `email`, `md5_pass`) VALUES
+(2, 'Mohamed', 'Ahmed', 'Ahmed@gmail.com', '64d367f7bdcfba6632d8bb3ce00b80e6')

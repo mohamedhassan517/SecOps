@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+}
+header {
+    font-size: larger;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    background-color: #000000;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 200px;
+    height: auto;
+}
+
+.web_group {
+    flex: 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.web_group a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.green {
+    width: 1px;
+    height: 30px;
+    background-color: #028673;
+    margin: 2px;
+}
+
+.Lgin-icon {
+    display: flex;
+    align-items: center;
+}
+
+.Lgin-icon a {
+    color: #028673;
+    margin: 5px;
+}
+
+.Lgin-icon img {
+    border: 2px solid #028673;
+    width: 50px;
+    height: 50px;
+}
+
+.mobil_group {
+    width: 250px;
+    height: 100vh;
+    background-color: #028673;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    z-index: 2;
+    transition: right 0.3s;
+   
+}
+
+nav ul {
+    padding: 20px;
+}
+
+nav ul li {
+    list-style: none;
+    margin-top: 20px;
+   
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+   
+}
+
+.minu_icon {
+    display: none;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.minu_icon img {
+    width: 50px;
+    height: 50px;
+}
+
+@media (max-width: 568px) {
+    .minu_icon {
+        display: block;
+    }
+    .web_group {
+        display: none;
+    }
+}
+.headot {
+    display:flex;
+    justify-content: center;
+    color:#008673;
+    font-size: 2.2em;
+    font-weight:700;
+    margin-bottom: 30px;
+    margin-top: 80px;
+}
+.content1{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.content2{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}.content3{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.card{
+    background-color: #fff;
+    height: 20em;
+    width: 17em;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 10%);
+    padding: 25px;
+    margin: 15px;
+    transition: 1s ease;
+    border-radius: 20px;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.icon{
+    text-align: center;
+}
+.inf{
+    text-align: center;
+}
+.inf h3{
+    color: #008673;
+    font-size: 1.2em;
+    font-weight:700 ;
+    margin: 3px;
+}
+/* Footer styles */
+footer {
+    background-color: #303030;
+    color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+.footer_top {
+    padding: 50px 0;
+}
+
+.footer_top .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer_top h3 {
+    color: #fff;
+    margin-left: 20px;
+}
+
+.footer_top p {
+    color: #aaa;
+    text-align: center;
+}
+
+.footer_top ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 20px;
+}
+
+.footer_top ul li {
+    margin-bottom: 10px;
+}
+
+.footer_top ul li a {
+    color: #aaa;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.footer_bottom {
+    background-color: #202020;
+    padding: 20px 0;
+}
+
+.footer_bottom p {
+    color: #aaa;
+    text-align: center;
+}
+
+.social_icons {
+    list-style: none;
+    padding: 0;
+}
+
+.social_icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social_icons li a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .contact_form,
+    .contact_image  ,.main_page, .about_us,.login_section {
+        flex: 0 0 100%; /* Take full width on small screens */
+    }
+}

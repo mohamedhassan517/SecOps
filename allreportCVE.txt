@@ -1,0 +1,4 @@
+# Nmap 7.95 scan initiated Fri Mar 21 18:52:24 2025 as: /usr/lib/nmap/nmap -sV --script vulners -oN allreportCVE.txt google-gruyere.appspot.com/part1
+Unable to split netmask from target expression: "google-gruyere.appspot.com/part1"
+WARNING: No targets were specified, so 0 hosts scanned.
+# Nmap done at Fri Mar 21 18:52:25 2025 -- 0 IP addresses (0 hosts up) scanned in 0.34 seconds
