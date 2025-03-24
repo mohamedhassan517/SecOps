@@ -1,0 +1,166 @@
+<cweid>1004
+<cweid>1021
+<cweid>1275
+<cweid>200
+<cweid>319
+<cweid>436
+<cweid>525
+<cweid>565
+<cweid>614
+<cweid>693
+Evil request:
+    GET /part1 HTTP/1.1
+    Host: google-gruyere.appspot.com
+cURL command PoC : "curl "https://google-gruyere.appspot.com/part1""
+
+                                  *   *   *
+
+CSP is not set
+Evil request:
+    GET /part1 HTTP/1.1
+    Host: google-gruyere.appspot.com
+cURL command PoC : "curl "https://google-gruyere.appspot.com/part1""
+
+                                  *   *   *
+
+CSP is not set
+Evil request:
+    GET /part1 HTTP/1.1
+    Host: google-gruyere.appspot.com
+cURL command PoC : "curl "https://google-gruyere.appspot.com/part1""
+
+                                  *   *   *
+
+********************************************************************************
+
+HTTP Secure Headers
+-------------------
+X-Frame-Options is not set
+Evil request:
+    GET /part1 HTTP/1.1
+    Host: google-gruyere.appspot.com
+cURL command PoC : "curl "https://google-gruyere.appspot.com/part1""
+
+                                  *   *   *
+
+X-XSS-Protection is not set
+Evil request:
+    GET /part1 HTTP/1.1
+    Host: google-gruyere.appspot.com
+cURL command PoC : "curl "https://google-gruyere.appspot.com/part1""
+
+                                  *   *   *
+
+X-Content-Type-Options is not set
+Evil request:
+    GET /part1 HTTP/1.1
+    Host: google-gruyere.appspot.com
+cURL command PoC : "curl "https://google-gruyere.appspot.com/part1""
+
+                                  *   *   *
+
+Strict-Transport-Security is not set
+Evil request:
+    GET /part1 HTTP/1.1
+    Host: google-gruyere.appspot.com
+cURL command PoC : "curl "https://google-gruyere.appspot.com/part1""
+
+                                  *   *   *
+
+X-Frame-Options is not set
+Evil request:
+    GET /part1 HTTP/1.1
+    Host: google-gruyere.appspot.com
+cURL command PoC : "curl "https://google-gruyere.appspot.com/part1""
+
+                                  *   *   *
+
+X-XSS-Protection is not set
+Evil request:
+    GET /part1 HTTP/1.1
+    Host: google-gruyere.appspot.com
+cURL command PoC : "curl "https://google-gruyere.appspot.com/part1""
+
+                                  *   *   *
+
+X-Content-Type-Options is not set
+Evil request:
+    GET /part1 HTTP/1.1
+    Host: google-gruyere.appspot.com
+cURL command PoC : "curl "https://google-gruyere.appspot.com/part1""
+
+                                  *   *   *
+
+Strict-Transport-Security is not set
+Evil request:
+    GET /part1 HTTP/1.1
+    Host: google-gruyere.appspot.com
+cURL command PoC : "curl "https://google-gruyere.appspot.com/part1""
+
+                                  *   *   *
+
+X-Frame-Options is not set
+Evil request:
+    GET /part1 HTTP/1.1
+    Host: google-gruyere.appspot.com
+cURL command PoC : "curl "https://google-gruyere.appspot.com/part1""
+
+                                  *   *   *
+
+X-XSS-Protection is not set
+Evil request:
+    GET /part1 HTTP/1.1
+    Host: google-gruyere.appspot.com
+cURL command PoC : "curl "https://google-gruyere.appspot.com/part1""
+
+                                  *   *   *
+
+X-Content-Type-Options is not set
+Evil request:
+    GET /part1 HTTP/1.1
+    Host: google-gruyere.appspot.com
+cURL command PoC : "curl "https://google-gruyere.appspot.com/part1""
+
+                                  *   *   *
+
+Strict-Transport-Security is not set
+Evil request:
+    GET /part1 HTTP/1.1
+    Host: google-gruyere.appspot.com
+cURL command PoC : "curl "https://google-gruyere.appspot.com/part1""
+
+                                  *   *   *
+
+X-Frame-Options is not set
+Evil request:
+    GET /part1 HTTP/1.1
+    Host: google-gruyere.appspot.com
+cURL command PoC : "curl "https://google-gruyere.appspot.com/part1""
+
+                                  *   *   *
+
+X-XSS-Protection is not set
+Evil request:
+    GET /part1 HTTP/1.1
+    Host: google-gruyere.appspot.com
+cURL command PoC : "curl "https://google-gruyere.appspot.com/part1""
+
+                                  *   *   *
+
+X-Content-Type-Options is not set
+Evil request:
+    GET /part1 HTTP/1.1
+    Host: google-gruyere.appspot.com
+cURL command PoC : "curl "https://google-gruyere.appspot.com/part1""
+
+                                  *   *   *
+
+Strict-Transport-Security is not set
+Evil request:
+    GET /part1 HTTP/1.1
+    Host: google-gruyere.appspot.com
+cURL command PoC : "curl "https://google-gruyere.appspot.com/part1""
+
+                                  *   *   *
+
+********************************************************************************

@@ -1,31 +1,34 @@
 #!/bin/bash
-
+compailed="simple_chat_ai/compailedReport.txt"
 # Define input and output files
-input_fileCVE="allreportCVE.txt"
-output_fileCVE="simple_chat_ai/cve_numbers.txt"
+input_nmap="nmapReport.txt"
+output_nmap="simple_chat_ai/nmapReport.txt"
 
 # Extract CVE numbers and save to output file
-grep -oP 'CVE-\d{4}-\d{4,}' "$input_fileCVE" | sort -u > "$output_fileCVE"
-cd simple_chat_ai
-head -n 10 cve_numbers.txt > cve_numbers1.txt
-echo "CVE numbers have been extracted to $output_fileCVE"
+grep -oP 'CVE-\d{4}-\d{4,}' "$input_nmap" | sort -u > "$output_nmap"
+echo "CVE numbers have been extracted to $output_nmap"
 
-cd ..
+
 # Define input and output files
-input_fileCWE="allreportCWE.txt"
-output_fileCWE="simple_chat_ai/cwe_numbers.txt"
+input_zap="zapReport.txt"
+output_zap="simple_chat_ai/zapReport.txt"
 
 # Extract CWE numbers and save to output file
-grep -oP '<cweid>\d{1,}' "$input_fileCWE" | sort -u > "$output_fileCWE"
-cd simple_chat_ai
-head -n 10 cwe_numbers.txt > cwe_numbers1.txt
-echo "CWE numbers have been extracted to $output_fileCWE"
+grep -oP '<cweid>\d{1,}' "$input_zap" | sort -u > "$output_zap"
+echo "CWE numbers have been extracted to $output_zap"
 
-cd ..
 
 #$output_fileCVWE = "simple_chat_ai/cvwe_numbers.txt"
 
-cat "$output_fileCVE" "$output_fileCWE" > "$output_fileCVE"
+output_nuclei="nucleiReport.txt"
+output_nikto="niktoReport.txt"
+
+
+input_wapiti="wapitiReport.txt"
+output_wapiti="simple_chat_ai/wapitiReport.txt"
+tail -n +41  "$input_wapiti" | head -n -10 > "$output_wapiti"
+
+cat "$output_nmap" "$output_zap" "$output_nuclei" "$output_nikto" "$output_wapiti"> "$compailed"
 
 
 # <cweid>548</cweid>

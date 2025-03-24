@@ -5,7 +5,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 
 // Define the file path for the report and the list of CVEs
-$reportFilePath = 'cve_numbers.txt';
+$reportFilePath = 'compailedReport.txt';
 $downloadDir = 'patches';
 
 // Check if the report file exists
@@ -35,7 +35,7 @@ try {
             'model' => 'gpt-4o',
             'messages' => [
                 ['role' => 'system', 'content' => 'You are a helpful assistant.'],
-                ['role' => 'user', 'content' => 'This is a report that contains CVEs and CWEs for websites. Extract each CVE and CWE with its number, get links for each CVE and CWE, description and solution for each CVE and CWE, and the degree of severity of the vulnerability (Critical, High, Medium, or Low) for each CVE and CWE. Also, give me recommendations about what should I do for closing these CVEs and CWE.'],
+                ['role' => 'user', 'content' => 'This is a report that contains CVEs, CWEs and vulnerability info for websites. Extract each CVE, CWE and vulnerability with its number, get links for each CVE and CWE, description and solution for each CVE and CWE and vulnerability, and the degree of severity of the vulnerability (Critical, High, Medium, or Low) for each CVE and CWE and vulnerability.'],
                 ['role' => 'user', 'content' => $reportContent]
             ],
             'temperature' => 0.0,
@@ -44,7 +44,45 @@ try {
             'presence_penalty' => 0.6,
         ],
     ]);
+// ### CVEs
 
+// 1. **CVE-2020-3231**
+//    - **Link**: [CVE-2020-3231](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-3231)
+//    - **Description**: This CVE typically involves a vulnerability in Cisco products that could allow an attacker to execute arbitrary code or cause a denial of service.
+//    - **Solution**: Update to the latest version of the affected software as per Cisco's advisory.
+//    - **Severity**: High
+
+// 2. **CVE-2023-2023**
+//    - **Link**: [CVE-2023-2023](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2023)
+//    - **Description**: Details for this CVE would need to be looked up as it may involve a specific vulnerability disclosed in 2023.
+//    - **Solution**: Follow the vendor's security advisory for patches or mitigations.
+//    - **Severity**: Critical (assumed based on typical CVE numbering)
+// ### CWEs
+
+// 1. **CWE-1004: Sensitive Cookie Without 'HttpOnly' Flag**
+//    - **Link**: [CWE-1004](https://cwe.mitre.org/data/definitions/1004.html)
+//    - **Description**: This weakness occurs when a web application does not set the 'HttpOnly' flag on cookies containing sensitive information, making them accessible to client-side scripts.
+//    - **Solution**: Ensure that the 'HttpOnly' flag is set for all cookies containing sensitive information.
+//    - **Severity**: Medium
+
+// 2. **CWE-1021: Improper Restriction of Rendered UI Layers or Frames**
+//    - **Link**: [CWE-1021](https://cwe.mitre.org/data/definitions/1021.html)
+//    - **Description**: This issue arises when a web application does not properly restrict the rendering of its UI layers or frames, potentially allowing clickjacking attacks.
+//    - **Solution**: Implement the X-Frame-Options header to prevent framing by unauthorized sites.
+//    - **Severity**: Medium
+// ### Vulnerabilities
+
+// 1. **Missing X-Frame-Options Header**
+//    - **Link**: [X-Frame-Options](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
+//    - **Description**: The absence of the X-Frame-Options header allows the site to be framed by other sites, potentially leading to clickjacking attacks.
+//    - **Solution**: Implement the X-Frame-Options header to prevent framing.
+//    - **Severity**: Medium
+
+// 2. **Missing Strict-Transport-Security Header**
+//    - **Link**: [Strict-Transport-Security](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)
+//    - **Description**: Without this header, the site may be vulnerable to man-in-the-middle attacks.
+//    - **Solution**: Implement the Strict-Transport-Security header to enforce secure connections.
+//    - **Severity**: High
     $responseBody = $response->getBody()->getContents();
     $responseObj = json_decode($responseBody);
 

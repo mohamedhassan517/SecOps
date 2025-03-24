@@ -2,4 +2,4 @@
 
 url="$1"
 echo "$url"
-nuclei -u $url -o allreports.txt
+nuclei -u $url -o nucleiReport.txt

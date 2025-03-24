@@ -1,2 +1,2 @@
-url="$1"
-./nikto.pl -h $url >> allreportCWE.txt
+
+timeout 200s nikto -h "$1" -o "niktoReport.txt" -Format txt
