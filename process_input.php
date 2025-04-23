@@ -15,7 +15,23 @@ $user_id = $_SESSION['2'];
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $url = $_POST["Url"];
     $url = stripcslashes($_POST['Url']);
-    
+    $timout = " 200s";    
+
+    $startSeq = microtime(true); // Start time
+    $output1 = shell_exec("bash nmap.sh " . escapeshellarg($url) . $timout);
+    $output5 = shell_exec("bash zapScript.sh " . escapeshellarg($url) . $timout);
+    $output5 = shell_exec("bash Nuclei.sh " . escapeshellarg($url) . $timout);
+    $output5 = shell_exec("bash nikto.sh " . escapeshellarg($url) . $timout);
+    $output5 = shell_exec("bash wapiti.sh " . escapeshellarg($url) . $timout);
+    $output5 = shell_exec("bash whatweb.sh " . escapeshellarg($url) . $timout);
+    $output5 = shell_exec("bash commix.sh " . escapeshellarg($url) . $timout);
+    $output5 = shell_exec("bash sqlmap.sh " . escapeshellarg($url) . $timout);
+    $output5 = shell_exec("bash XSStrike.sh " . escapeshellarg($url) . $timout);
+    $endSeq = microtime(true); // End time
+    $executionSeq_time = $endSeq - $startSeq; // Calculate elapsed time
+
+
+    $startPar = microtime(true); // Start time
     // Execute Bash scripts with URL as argument
     // Example commands (replace with actual commands as needed)
     $scripts = [
@@ -23,7 +39,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "zapScript.sh",
         "Nuclei.sh",
         "nikto.sh",
-        "wapiti.sh"
+        "wapiti.sh",
+        "whatweb.sh",
+        "commix.sh",
+        "sqlmap.sh",
+        "XSStrike.sh",
     ];
     
     
@@ -36,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             2 => ["pipe", "w"]   // stderr
         ];
     
-        $command = "bash " . $script . " " . escapeshellarg($url);
+        $command = "bash " . $script . " " . escapeshellarg($url) . $timout;
         $process = proc_open($command, $descriptorspec, $pipes);
     
         if (is_resource($process)) {
@@ -53,13 +73,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         fclose($process['pipes'][2]);
         proc_close($process['process']);
     
-        echo $output . PHP_EOL;
+       // echo $output . PHP_EOL;
     }
 
-   
+    $endPar = microtime(true); // End time
+    $executionPar_time = $endPar - $startPar; // Calculate elapsed time
 
-    $output2 = shell_exec("bash extract_cve.sh ");
-    $output3 = shell_exec("bash ai.sh ");
+    $output2 = shell_exec("bash extract_cve.sh " . escapeshellarg($url));
+    //$output3 = shell_exec("bash ai.sh ");
 
     /************************************************************************standard response from chatgpt4o ******************************************************/
 //     $output3 = "Response from ChatGPT:
@@ -223,13 +244,21 @@ function extractVulnerabilities($text) {
 
 
 // Extract CVEs, severities, descriptions, and solutions from $output3
-$Vulnerabilities = extractVulnerabilities($output3);
-$links = extractLinks($output3);
-$severities = extractSeverities($output3);
-$descriptions = extractDescriptions($output3);
-$solutions = extractSolutions($output3);
+// $Vulnerabilities = extractVulnerabilities($output3);
+// $links = extractLinks($output3);
+// $severities = extractSeverities($output3);
+// $descriptions = extractDescriptions($output3);
+// $solutions = extractSolutions($output3);
 
+echo "<h3>Execution sequence Time:</h3>";
+echo "<pre>";
+echo number_format($executionSeq_time, 6) . " seconds";
+echo "</pre>";
 
+echo "<h3>Execution paralell Time:</h3>";
+echo "<pre>";
+echo number_format($executionPar_time, 6) . " seconds";
+echo "</pre>";
 
     // // Debugging: Print variables
     // echo "<h2>Debugging Output</h2>";

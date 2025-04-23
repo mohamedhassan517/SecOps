@@ -1,0 +1,1 @@
+[[94m11:36:51[0m] [0m[[32minfo[0m] Using 'stdin' for parsing targets list.[0m

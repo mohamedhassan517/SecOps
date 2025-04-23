@@ -2,4 +2,4 @@
 
 url="$1"
 echo "$url"
-nuclei -u $url -o nucleiReport.txt
+timeout  "$2" nuclei -u $url -o nucleiReport.txt

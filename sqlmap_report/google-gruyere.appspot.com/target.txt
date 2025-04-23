@@ -1,0 +1,1 @@
+https://google-gruyere.appspot.com/part1 (GET)  # /usr/bin/sqlmap -u https://google-gruyere.appspot.com/part1 --batch --output-dir=./sqlmap_report

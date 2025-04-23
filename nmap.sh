@@ -5,4 +5,4 @@ remove_https() {
 
 url="$1"
 output_url=$(remove_https "$url")
-nmap -sV --script vulners -oN nmapReport.txt $output_url 
+timeout  "$2" nmap -sV --script vulners -oN nmapReport.txt $output_url 

@@ -68,8 +68,7 @@
         <div class="scan_div">
             <div class="scan_text">
                 <h1> ComScanner </h1>
-                <p>We are glad you are using our website </p>
-                <p>We hope that your website will be more secure <span class="heart">&hearts;</span></p>
+                <p>We hope that your website will be more secure.</p>
             </div>
             <div class="scan_form">
                 <form action="process_input.php" method="post">

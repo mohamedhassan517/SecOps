@@ -1,0 +1,22 @@
+[deprecated-tls:tls_1.1] [ssl] [info] google-gruyere.appspot.com:443 ["tls11"]
+[weak-cipher-suites:tls-1.0] [ssl] [low] google-gruyere.appspot.com:443 ["[tls10 TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA]"]
+[tls-version] [ssl] [info] google-gruyere.appspot.com:443 ["tls10"]
+[deprecated-tls:tls_1.0] [ssl] [info] google-gruyere.appspot.com:443 ["tls10"]
+[tls-version] [ssl] [info] google-gruyere.appspot.com:443 ["tls11"]
+[weak-cipher-suites:tls-1.1] [ssl] [low] google-gruyere.appspot.com:443 ["[tls11 TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA]"]
+[tls-version] [ssl] [info] google-gruyere.appspot.com:443 ["tls12"]
+[tls-version] [ssl] [info] google-gruyere.appspot.com:443 ["tls13"]
+[http-missing-security-headers:strict-transport-security] [http] [info] https://google-gruyere.appspot.com/part1
+[http-missing-security-headers:permissions-policy] [http] [info] https://google-gruyere.appspot.com/part1
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] https://google-gruyere.appspot.com/part1
+[http-missing-security-headers:referrer-policy] [http] [info] https://google-gruyere.appspot.com/part1
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] https://google-gruyere.appspot.com/part1
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] https://google-gruyere.appspot.com/part1
+[http-missing-security-headers:content-security-policy] [http] [info] https://google-gruyere.appspot.com/part1
+[http-missing-security-headers:x-frame-options] [http] [info] https://google-gruyere.appspot.com/part1
+[http-missing-security-headers:x-content-type-options] [http] [info] https://google-gruyere.appspot.com/part1
+[http-missing-security-headers:clear-site-data] [http] [info] https://google-gruyere.appspot.com/part1
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] https://google-gruyere.appspot.com/part1
+[options-method] [http] [info] https://google-gruyere.appspot.com/part1 ["GET"]
+[robots-txt-endpoint] [http] [info] https://google-gruyere.appspot.com/robots.txt
+[google-frontend-httpserver] [http] [info] https://google-gruyere.appspot.com/part1

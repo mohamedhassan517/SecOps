@@ -1,0 +1,5 @@
+[91m
+	XSStrike [97mv3.1.5
+[0m
+[93m[!][0m fuzzywuzzy isn't installed, installing now.
+[91m[-][0m fuzzywuzzy installation failed.

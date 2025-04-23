@@ -4,6 +4,8 @@ require __DIR__ . '/vendor/autoload.php';
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 
+ // Your OpenAI API key
+
 // Define the file path for the report and the list of CVEs
 $reportFilePath = 'compailedReport.txt';
 $downloadDir = 'patches';
